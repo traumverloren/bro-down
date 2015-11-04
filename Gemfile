@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -10,6 +11,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# User Authentication
+gem 'jwt'
 
 group :development, :test do
   gem 'byebug'
