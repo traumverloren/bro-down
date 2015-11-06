@@ -46,6 +46,7 @@ function userService($http, auth) {
 function MainCtrl(user, auth) {
   var self = this;
 
+  // don't need this in rails api, take out handlerequest
   function handleRequest(res) {
     var token = res.data ? res.data.token : null;
     if(token) { console.log('JWT:', token); }
@@ -55,7 +56,7 @@ function MainCtrl(user, auth) {
   self.login = function() {
     user.login(self.email, self.password)
       .then(handleRequest, handleRequest)
-      .then(console.log("hi"))
+      .then(console.log('JWT:', token))
 
   }
   self.register = function() {
