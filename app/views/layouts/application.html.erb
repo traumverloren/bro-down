@@ -6,9 +6,23 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
 
+<body ng-app="broDown" ng-controller="Main as main">
+  <h1>Simple Angular Auth</h1>
+
+  <input type="text" ng-model="main.email" placeholder="email"><br>
+  <input type="password" ng-model="main.password" placeholder="password"><br>
+  <br>
+
+  <button ng-click="main.register()">Register</button>
+  <button ng-click="main.login()">Login</button>
+  <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
+
+  <br><br>
+  {{main.message}}
+
+  <br><br><br>
 </body>
+
 </html>

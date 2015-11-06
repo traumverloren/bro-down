@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  post 'authenticate' => 'auth#authenticate'
+  root to: 'application#angular'
+
+  post 'auth' => 'auth#authenticate'
 end

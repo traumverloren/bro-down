@@ -15,6 +15,8 @@ gem 'bcrypt', '~> 3.1.7'
 # User Authentication
 gem 'jwt'
 
+gem 'angular_csrf'
+
 group :development, :test do
   gem 'byebug'
 end
